@@ -10,7 +10,7 @@ import pytz # timezone ("naive", "aware")
 tz = pytz.utc
 import evolution_bayes
 
-def scan_dbfile(path='./history'):
+def scan_dbfile(path='../gekko/history'):
     files = os.listdir(path)
     results = []
     for filename in files:
