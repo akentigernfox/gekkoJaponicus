@@ -145,11 +145,11 @@ def firePaperTrader(TradeSetting, Exchange, Currency, Asset):
 def createConfig(TradeSetting, DateRange, candleSize=10, gekko_config=None):
     print("gekko.py:createConfig")
     if "watch" in TradeSetting:
-        print("gekko.py:createConfig:TradeSetting:watch")
+        #print("gekko.py:createConfig:TradeSetting:watch")
         watch = TradeSetting["watch"]
         del TradeSetting["watch"]
     else:
-        print("gekko.py:createConfig:else:watch")
+        #print("gekko.py:createConfig:else:watch")
         watch = {
                 "exchange": "poloniex",
                 "currency": "BTC",
