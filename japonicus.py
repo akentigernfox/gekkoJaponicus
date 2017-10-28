@@ -34,7 +34,7 @@ options, args = parser.parse_args()
 
 gekko_server = None
 web_server = None
-strat = choice(settings['global']['Strategies'])\
+strat = choice(settings['Global']['Strategies'])\
         if options.strategy == 'all'\
         else options.strategy
 

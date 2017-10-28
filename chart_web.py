@@ -24,7 +24,7 @@ import Settings
 import coreFunctions
 import evolution_bayes
 
-gsettings = Settings.getSettings()['global']
+gsettings = Settings.getSettings()['Global']
 settings = Settings.getSettings()['bayesian']
 
 MA_SMA, MA_EMA, MA_WMA, MA_DEMA, MA_TEMA, MA_TRIMA, MA_KAMA, MA_MAMA, MA_T3 = range(9)
