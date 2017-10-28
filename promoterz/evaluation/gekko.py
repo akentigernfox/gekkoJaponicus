@@ -75,7 +75,7 @@ def loadHostsFile():
 def runBacktest(TradeSetting, DateRange, candleSize=10, gekko_config=None):
     gekko_config = createConfig(TradeSetting, DateRange, candleSize, gekko_config)
     url = getURL('/api/backtest')
-    print("RunBacktest")
+    #print("RunBacktest")
     result = httpPost(url, gekko_config)
     # sometime report is False(not dict)
     if type(result['report']) is bool:
@@ -143,7 +143,7 @@ def firePaperTrader(TradeSetting, Exchange, Currency, Asset):
     print(RESULT)
     
 def createConfig(TradeSetting, DateRange, candleSize=10, gekko_config=None):
-    print("gekko.py:createConfig")
+    #print("gekko.py:createConfig")
     if "watch" in TradeSetting:
         #print("gekko.py:createConfig:TradeSetting:watch")
         watch = TradeSetting["watch"]
