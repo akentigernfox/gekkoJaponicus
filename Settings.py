@@ -45,8 +45,8 @@ def getSettings(specific=None):
             'candleSize': 30,
             'dataset_source': { # dataset_source can be set to None so it searches from any source;
                 "exchange": "poloniex",
-                "currency": 'USDT',
-                "asset": 'BTC'
+                "currency": 'BTC',
+                "asset": 'VRC'
             },
             'finaltest': {
                 'NBBESTINDS': 1,
@@ -71,8 +71,8 @@ def getSettings(specific=None):
             'save': True,
             'watch':{
                 "exchange": "poloniex",
-                "currency": 'USDT',
-                "asset": 'BTC'
+                "currency": 'BTC',
+                "asset": 'VRC'
             }
         },
         'strategies': {
