@@ -17,8 +17,8 @@ config.watch = {
 
   // see https://gekko.wizb.it/docs/introduction/supported_exchanges.html
   exchange: 'poloniex',
-  currency: 'BTC',
-  asset: 'BCY',
+  currency: 'USDT',
+  asset: 'BTC',
 
   // You can set your own tickrate (refresh rate).
   // If you don't set it, the defaults are 2 sec for

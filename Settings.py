@@ -71,8 +71,8 @@ def getSettings(specific=None):
             'save': True,
             'watch':{
                 "exchange": "poloniex",
-                "currency": 'BTC',
-                "asset": 'VRC'
+                "currency": 'USDT',
+                "asset": 'BTC'
             }
         },
         'strategies': {
