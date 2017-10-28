@@ -148,8 +148,8 @@ def createConfig(TradeSetting, DateRange, candleSize=10, gekko_config=None):
     else:
         watch = {
                 "exchange": "poloniex",
-                "currency": "USDT",
-                "asset": "BTC"
+                "currency": "BTC",
+                "asset": "VRC"
         }
     TradeMethod = list(TradeSetting.keys())[0]
     true = True
@@ -208,7 +208,7 @@ def getCandles(DateRange, size=100):
         "watch": {
             "exchange": "poloniex",
             "currency": "BTC",
-            "asset": "ETH"
+            "asset": "VRC"
             },
         "daterange": DateRange,
         "adapter": "sqlite",
