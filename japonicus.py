@@ -40,6 +40,7 @@ strat = choice(settings['global']['Strategies'])\
 
 if options.spawn_gekko:
    if options.genetic_algorithm or options.bayesian_optimization:
+        print("Gekko Path : " + settings['global']['gekkoPath'] )
         gekko_args = ['node',
                      '--max-old-space-size=8192',
                      settings['global']['gekkoPath']+'/web/server.js']
