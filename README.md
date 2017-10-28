@@ -27,7 +27,7 @@ T.2 -> $cd [japonicus dir]
     -w launches a neat dash/flask web server @ your local machine, which can be accessed via  webbrowser. 
            Address is shown on the first line of console output. (likely http://localhost:5000)
        
-    
+sudo apt-get install python-numpy python-scipy python-matplotlib ipython ipython-notebook python-pandas python-sympy python-nose  
 ```
 If your Gekko UI http port is not :3000, adjust accordingly in 
 promoterz/evaluation/gekko.py
