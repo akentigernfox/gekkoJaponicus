@@ -18,7 +18,7 @@ config.watch = {
   // see https://gekko.wizb.it/docs/introduction/supported_exchanges.html
   exchange: 'poloniex',
   currency: 'BTC',
-  asset: 'VRC',
+  asset: 'BCY',
 
   // You can set your own tickrate (refresh rate).
   // If you don't set it, the defaults are 2 sec for
@@ -243,7 +243,7 @@ config.mailer = {
   sendMailOnStart: true,    // Send 'Gekko starting' message if true, not if false
 
   email: 'andrew@akfdev.com',    // Your Gmail address
-  muteSoft: true, // disable advice printout if it's soft
+  muteSoft: false, // disable advice printout if it's soft
 
   // You don't have to set your password here, if you leave it blank we will ask it
   // when Gekko's starts.

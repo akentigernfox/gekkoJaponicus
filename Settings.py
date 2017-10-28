@@ -46,7 +46,7 @@ def getSettings(specific=None):
             'dataset_source': { # dataset_source can be set to None so it searches from any source;
                 "exchange": "poloniex",
                 "currency": 'BTC',
-                "asset": 'VRC'
+                "asset": 'BCY'
             },
             'finaltest': {
                 'NBBESTINDS': 1,
