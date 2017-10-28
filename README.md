@@ -29,7 +29,10 @@ T.2 -> $cd [japonicus dir]
        
     
 ```
-If your Gekko UI http port is not :3000, adjust accordingly on gekkoWrapper.py.
+If your Gekko UI http port is not :3000, adjust accordingly in 
+promoterz/evaluation/gekko.py
+    gekkoURLs = ['http://localhost:3000']
+    URL = "http://localhost:3000/api/getCandles"
 
 Backtesting is parallel. It runs five at a time, or adjust it on Settings.py
 

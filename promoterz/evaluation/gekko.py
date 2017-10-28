@@ -10,8 +10,8 @@ from urllib import request, parse
 import json
 import requests
 import datetime
-
-gekkoURLs = ['http://localhost:3000']
+# Would be better read from the gekko/web/vue/UIconfig.js
+gekkoURLs = ['http://localhost:3020']
 gekkoDIR = 'TBD'
 
 def getURL(path):
@@ -203,7 +203,7 @@ def createConfig(TradeSetting, DateRange, candleSize=10, gekko_config=None):
 
 
 def getCandles(DateRange, size=100):
-    URL = "http://localhost:3000/api/getCandles"
+    URL = "http://localhost:3020/api/getCandles"
     CONFIG = {
         "watch": {
             "exchange": "poloniex",
