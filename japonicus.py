@@ -38,7 +38,7 @@ strat = choice(settings['global']['Strategies'])\
         if options.strategy == 'all'\
         else options.strategy
 
-print("Strategy Passed :" + options.strategy)
+print("Strategy Used :" + strat)
 
 if options.spawn_gekko:
    if options.genetic_algorithm or options.bayesian_optimization:
