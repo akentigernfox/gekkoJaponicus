@@ -22,7 +22,8 @@ dict_merge = lambda a,b: a.update(b) or a
 gsettings = getSettings()['global']
 settings = getSettings()['bayesian']
 
-Strategy = gsettings["Strategy"]
+Strategy = settings["Strategy"]
+print("Strategy : " + Strategy )
 StratConfig = getSettings()["strategies"][Strategy]
 
 percentiles = np.array([0.25, 0.5, 0.75])
