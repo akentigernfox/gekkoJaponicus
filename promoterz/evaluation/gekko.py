@@ -104,8 +104,8 @@ def runBacktest(TradeSetting, DateRange, candleSize=10, gekko_config=None):
         return 0, 0
 
     rProfit = result['report']['relativeProfit']
-    print("Profit : ")
-    pprint(result)
+    print("Result : ")
+    pprint( result['report'])
     nbTransactions = result['report']['trades']
     return rProfit, nbTransactions
 
