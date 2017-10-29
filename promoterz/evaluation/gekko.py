@@ -28,7 +28,7 @@ def httpPost(URL, data={}):
     except Exception as e:
         print("Error: config failure")
         print("")
-        print("URL          :"URL)
+        print("URL          :" + URL)
         print("")
         print("Post Data    : " + data)
         print("")
