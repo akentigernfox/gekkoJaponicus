@@ -58,6 +58,7 @@ def getAvailableDataset(exchange_source=None):
  
     scanset = []
     for s in DataSetPack:
+        pprint(s)
         if (s["asset"]==exchange_source["asset"] and s["exchange"]==exchange_source["exchange"] and s["currency"]==exchange_source["currency"]):
             scanset.append(s)
 
@@ -105,7 +106,9 @@ def runBacktest(TradeSetting, DateRange, candleSize=10, gekko_config=None):
 
     rProfit = result['report']['relativeProfit']
     print("Result : ")
-    pprint( result['report'])
+    pprint(result['report']['relativeProfit'])
+    pprint(result['report']['trades'])
+
     nbTransactions = result['report']['trades']
     return rProfit, nbTransactions
 
