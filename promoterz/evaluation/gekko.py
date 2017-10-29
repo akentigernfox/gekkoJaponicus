@@ -78,7 +78,7 @@ def getAvailableDataset(exchange_source=None):
 
     LongestDataset = scanset[best_exchange]['ranges'][scanset[best_exchange]['max_span_index']]
     print("---------------")
-    ppint(LongestDataset)
+    pprint(LongestDataset)
     print("---------------")
     return LongestDataset
 
