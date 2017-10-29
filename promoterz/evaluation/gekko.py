@@ -53,11 +53,13 @@ def getAllScanset():
 def getAvailableDataset(exchange_source=None):
 
     print("getAvailableDataset")
+    pprint(exchange_source)
     DataSetPack = getAllScanset()
  
     scanset = []
     for s in DataSetPack:
-        if (s ==  exchange_source):
+        pprint(s)
+        if (s==exchange_source):
             pprint(s)
             scanset.append(s)
 
