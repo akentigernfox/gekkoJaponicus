@@ -42,7 +42,7 @@ def httpPost(URL, data={}):
         raise e
 
     return Response
-    
+
 def getAllScanset():
     URL = getURL('/api/scansets')
 
@@ -55,18 +55,20 @@ def getAvailableDataset(exchange_source=None):
     print("getAvailableDataset")
     pprint(exchange_source)
     DataSetPack = getAllScanset()
- 
+
     scanset = []
     for s in DataSetPack:
         pprint(s)
-        if (s["asset"]==exchange_source["asset"] and s["exchange"]==exchange_source["exchange"] and s["currency"]==exchange_source["currency"]):
+        if (s["asset"] == exchange_source["asset"]
+                and s["exchange"] == exchange_source["exchange"]
+                and s["currency"] == exchange_source["currency"]):
             scanset.append(s)
 
     if len(scanset) == 0:
         raise "scanset not available: {}".format(watch)
         # Bug Unknown watch
 
-    
+
     for EXCHANGE in scanset:
         ranges = EXCHANGE['ranges']
         range_spans = [x['to']-x['from'] for x in ranges]
@@ -157,10 +159,10 @@ def firePaperTrader(TradeSetting, Exchange, Currency, Asset):
             "enabled":true},
         "valid":true
     }
-    
+
     RESULT = httpPost(URL,CONFIG)
     print(RESULT)
-    
+
 def createConfig(TradeSetting, DateRange, candleSize=10, gekko_config=None):
     #print("gekko.py:createConfig")
     if "watch" in TradeSetting:
@@ -230,8 +232,8 @@ def getCandles(DateRange, size=100):
     CONFIG = {
         "watch": {
             "exchange": "poloniex",
-            "currency": "BTC",
-            "asset": "VRC"
+            "currency": "USDT",
+            "asset": "BTC"
             },
         "daterange": DateRange,
         "adapter": "sqlite",
@@ -299,5 +301,3 @@ def globalEvaluationDataset(DatasetLimits, deltaDays, NB):
         Dataset.append(DateRange)
 
     return Dataset
-
-
