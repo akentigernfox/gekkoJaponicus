@@ -59,7 +59,9 @@ def getAvailableDataset(exchange_source=None):
     scanset = []
     for s in DataSetPack:
         pprint(s)
-        if (s==exchange_source):
+        if (s["asset"]==exchange_source["asset"] and
+            s["exchange"]==exchange_source["exchange"] and
+            s["currency"]==exchange_source["currnecy"]):
             pprint(s)
             scanset.append(s)
 
