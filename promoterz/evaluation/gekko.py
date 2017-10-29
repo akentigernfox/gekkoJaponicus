@@ -30,9 +30,9 @@ def httpPost(URL, data={}):
         print("")
         print("URL          :" + URL)
         print("")
-        print("Post Data    : " + data)
-        print("")
         print("Request.text :" + Request.text)
+        print("")
+        print json.dumps(data, indent=4, sort_keys=True)
         raise e
 
     return Response
