@@ -95,9 +95,11 @@ def run_server():
     '''
 
     @cache.memoize(timeout=timeout)
+
     @app.callback(
         Output('output', 'figure'),
         events=[Event('my-interval', 'interval')])
+
     def update_graph():
         print('Loading')
         df = load_evolution_logs()
@@ -160,7 +162,7 @@ def run_server():
 
     # Run the Dash app
     if __name__ == '__main__':
-        app.server.run(debug=True)
+        app.server.run(debug=fase)
 
     else: # this way it integrates with main interface without child procs across pipes,
         return app
