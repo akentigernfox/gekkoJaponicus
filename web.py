@@ -27,6 +27,12 @@ def load_evolution_logs(filename="evolution_gen.csv"):
 def run_server():
     # Setup the app
     server = flask.Flask(__name__)
+
+    #Only log errors
+    import logging
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.ERROR)
+
     #server.secret_key = os.environ.get('secret_http://localhost:500/key', 'secret')
     app = dash.Dash(__name__, server=server, csrf_protect=False)
 
