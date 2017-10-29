@@ -10,6 +10,9 @@ from urllib import request, parse
 import json
 import requests
 import datetime
+from pprint import pprint
+
+
 # Would be better read from the gekko/web/vue/UIconfig.js
 gekkoURLs = ['http://localhost:3020']
 gekkoDIR = 'TBD'
@@ -51,13 +54,11 @@ def getAvailableDataset(exchange_source=None):
 
     print("getAvailableDataset")
     DataSetPack = getAllScanset()
-
+ 
     scanset = []
     for s in DataSetPack:
-        for k in "exchange currency asset".split(" "):
-            if exchange_source and s[k] != exchange_source[k]:
-                continue
-            print("Exchange" + k + ":" + exchange_source[k])
+        if (s ==  exchange_source):
+            pprint(s)
             scanset.append(s)
 
     if len(scanset) == 0:
