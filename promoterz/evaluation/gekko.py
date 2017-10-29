@@ -103,6 +103,7 @@ def runBacktest(TradeSetting, DateRange, candleSize=10, gekko_config=None):
         # So rare that has no impact;
         return 0, 0
 
+    print("Profit : " + result['report']['relativeProfit'])
     rProfit = result['report']['relativeProfit']
     nbTransactions = result['report']['trades']
     return rProfit, nbTransactions
