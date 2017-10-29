@@ -22,6 +22,8 @@ def initializeGekko(): # not used yet.
     D = Popen(CMD, stdin=PIPE, stdout=PIPE, stderr=PIPE)
 
 def httpPost(URL, data={}):
+
+    print("Post Data    :" + json.dumps(data, indent=4, sort_keys=True))
     Request = requests.post(URL, json=data)
     try:
         Response = json.loads(Request.text)
