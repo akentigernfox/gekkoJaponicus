@@ -49,6 +49,7 @@ def getAllScanset():
 
 def getAvailableDataset(exchange_source=None):
 
+    print("getAvailableDataset")
     DataSetPack = getAllScanset()
 
     scanset = []
@@ -56,11 +57,14 @@ def getAvailableDataset(exchange_source=None):
         for k in "exchange currency asset".split(" "):
             if exchange_source and s[k] != exchange_source[k]:
                 continue
+            print("Exchange" + k + ":" + exchange_source[k])
             scanset.append(s)
 
     if len(scanset) == 0:
-        raise "scanset not available: {}".format("None Availale")
+        raise "scanset not available: {}".format(watch)
+        # Bug Unknown watch
 
+    
     for EXCHANGE in scanset:
         ranges = EXCHANGE['ranges']
         range_spans = [x['to']-x['from'] for x in ranges]
