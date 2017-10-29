@@ -34,16 +34,16 @@ options, args = parser.parse_args()
 
 gekko_server = None
 web_server = None
-strat = choice(settings['Global']['Strategies'])\
+strat = choice(settings['global']['Strategies'])\
         if options.strategy == 'all'\
         else options.strategy
 
 if options.spawn_gekko:
    if options.genetic_algorithm or options.bayesian_optimization:
-        print("Gekko Path : " + settings['Global']['gekkoPath'] )
+        print("Gekko Path : " + settings['global']['gekkoPath'] )
         gekko_args = ['node',
                      '--max-old-space-size=8192',
-                     settings['Global']['gekkoPath']+'/web/server.js']
+                     settings['global']['gekkoPath']+'/web/server.js']
 
         gekko_server = Popen(gekko_args, stdin=PIPE, stdout=PIPE)
         sleep(2)

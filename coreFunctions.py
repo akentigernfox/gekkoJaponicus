@@ -48,7 +48,7 @@ def loadGekkoConfig():
     pass
 
 def logInfo(message, filename="evolution_gen.log"):
-    gsettings = getSettings()['Global']
+    gsettings = getSettings()['global']
     filename = os.path.join(gsettings['save_dir'], filename)
     F=open(filename, 'a+')
     F.write(message)

@@ -20,7 +20,7 @@ class _settings:
 
 def getSettings(specific=None):
     s = {
-        'Global': {
+        'global': {
             'gekkoPath': os.getenv("HOME")+'/git/gekko',
             'Strategies': ['DEMA', 'MACD', 'PPO', 'RSI', 'StochRSI', 'TSI'],
             'configFilename': 'example-config.js',
