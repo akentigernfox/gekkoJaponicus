@@ -45,8 +45,8 @@ def getSettings(specific=None):
             'candleSize': 30,
             'dataset_source': { # dataset_source can be set to None so it searches from any source;
                 "exchange": "poloniex",
-                "currency": 'BTC',
-                "asset": 'BCY'
+                "currency": 'USDT',
+                "asset": 'BTC'
             },
             'finaltest': {
                 'NBBESTINDS': 1,
