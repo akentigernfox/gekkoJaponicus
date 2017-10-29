@@ -37,7 +37,7 @@ web_server = None
 strat = choice(settings['global']['Strategies'])\
         if options.strategy == 'all'\
         else options.strategy
-
+print("Strategy Passed :" + options.strategy)
 if options.spawn_gekko:
    if options.genetic_algorithm or options.bayesian_optimization:
         print("Gekko Path : " + settings['global']['gekkoPath'] )
