@@ -59,7 +59,7 @@ def getAvailableDataset(exchange_source=None):
             scanset.append(s)
 
     if len(scanset) == 0:
-        raise "scanset not available: {}".format(watch)
+        raise "scanset not available: {}".format("None Availale")
 
     for EXCHANGE in scanset:
         ranges = EXCHANGE['ranges']
