@@ -173,8 +173,8 @@ def createConfig(TradeSetting, DateRange, candleSize=10, gekko_config=None):
         #print("gekko.py:createConfig:else:watch")
         watch = {
                 "exchange": "poloniex",
-                "currency": "BTC",
-                "asset": "VRC"
+                "currency": "USDT",
+                "asset": "BTC"
         }
     TradeMethod = list(TradeSetting.keys())[0]
     true = True
@@ -225,7 +225,6 @@ def createConfig(TradeSetting, DateRange, candleSize=10, gekko_config=None):
     if gekko_config == None:
         gekko_config = CONFIG
     return gekko_config
-
 
 def getCandles(DateRange, size=100):
     URL = "http://localhost:3020/api/getCandles"
